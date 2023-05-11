@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width = device-width, initial-scale=1">
+        <title>Pokiamon</title>      
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+
+        <section id="seleccionar-pokiamon">
+            <h1 class="titulo">Pokiamon </h1>
+
+            <h2 class="subtitulo">Soy el profesor Madera, elige un Pokiamon y date en la jeta</h2>
+
+            <div id="contenedor-tarjetas" class="tarjetas">
+            </div>
+
+            <button id="boton-pokiamon">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo">Explora con tu Pokiamon</h2>
+            <div id="mapa-movimiento">
+                <canvas id="mapa"></canvas>
+                <div class="botones-movimiento">
+                    <button 
+                    ontouchstart="moverArriba()"
+                    ontouchend="detenerMovimiento()" 
+                    onmouseup="detenerMovimiento()" 
+                    onmousedown= "moverArriba()" class="flechas-verticales">&#8593;</button>
+                    <div>
+                        <button 
+                        ontouchstart="moverIzquierda()" 
+                        ontouchend="detenerMovimiento()" 
+                        onmouseup="detenerMovimiento()" 
+                        onmousedown= "moverIzquierda()" class="flechas">&#8592;</button>
+                        <button 
+                        ontouchstart="moverAbajo()"
+                        ontouchend="detenerMovimiento()" 
+                        onmouseup="detenerMovimiento()" 
+                        onmousedown= "moverAbajo()" class="flechas-verticales">&#8595;</button>
+                        <button 
+                        ontouchstart="moverDerecha()"
+                        ontouchend="detenerMovimiento()" 
+                        onmouseup="detenerMovimiento()" 
+                        onmousedown= "moverDerecha()" class="flechas">&#8594;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">Pokiamon </h1>
+
+            <h2 class="subtitulo">Elige tu putiazo</h2>
+
+            <div id="contenedor-ataques">
+            </div>
+
+            <div id="mensajes">
+                <p id="resultado">Preparate para el combate, elige tus ataques.</p>
+                    
+                <section id="reiniciar">
+                    <p><button id="boton-reiniciar">Reiniciar</button></p>
+                </section>
+            </div>
+
+            <section id="reporte-batalla">
+                <div>
+                    <p>Tu <span id="pokiamon-jugador"></span> tiene  <span id="vidas-pokiamon-jugador">0</span> Victorias</p>
+                    <div id="ataque-pj"></div>
+                </div>
+                
+                <div>
+                    <p>Su <span id="pokiamon-PC"></span> tiene <span id="vidas-pokiamon-PC">0</span> Victorias</p>    
+                    <div id="ataque-pc"></div>
+                </div>
+            </section>
+        </section>
+        
+        <script src="./js/pokiamon.js"></script>
+    </body>
+</html>
