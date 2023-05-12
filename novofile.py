@@ -8,4 +8,6 @@ print('ovio')
 print('Se puede hasta volar')
 groserias.fly
 
-""" Interesante como en Python se hacen notas """
+
+
+""" me gusta que muestra que es el codigo nuevo y que es el codigo viejo """
